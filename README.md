@@ -1,8 +1,10 @@
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sGaQ6Vm9BAc" frameborder="0" allowfullscreen></iframe>
+
 Selfy CMS - Графическое web-ПО, облегчающий администрирование и разработку сайтов любой сложности
 
 0.42 version (размер: 9 Мб)
 	
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/sGaQ6Vm9BAc" frameborder="0" allowfullscreen></iframe>
+	
 	
 	#Структура движка (MVC)
 	* index.php - главный контроллер
