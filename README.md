@@ -1,4 +1,4 @@
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/sGaQ6Vm9BAc?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+<a href="https://www.youtube.com/watch?v=sGaQ6Vm9BAc&vq=hd720"><img src="https://habrastorage.org/files/df8/e00/d70/df8e00d7083d4e09ae216afc99eb41ed.png"></a>
 
 Selfy CMS - Графическое web-ПО, облегчающий администрирование и разработку сайтов любой сложности
 
