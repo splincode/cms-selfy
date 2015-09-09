@@ -1,4 +1,4 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sGaQ6Vm9BAc" frameborder="0" allowfullscreen></iframe>
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/sGaQ6Vm9BAc?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
 
 Selfy CMS - Графическое web-ПО, облегчающий администрирование и разработку сайтов любой сложности
 
