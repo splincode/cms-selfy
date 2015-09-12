@@ -1,5 +1,8 @@
 Selfy CMS - Графическое web-ПО, облегчающий администрирование и разработку сайтов любой сложности
 
+0.43 version
+	#Добавлена авторизация
+
 0.42 version (размер: 9 Мб)
 <a href="https://www.youtube.com/watch?v=sGaQ6Vm9BAc&vq=hd720" target="_blank"><img src="https://habrastorage.org/files/df8/e00/d70/df8e00d7083d4e09ae216afc99eb41ed.png"></a>
 	
