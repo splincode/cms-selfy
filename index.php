@@ -1,16 +1,24 @@
 <?php
 	
 	require 'core/autoload.php'; // подгрузка библиотек
-	require 'core/init/status.php'; // обработка исключений
+	require 'routers/status/bad.php'; // обработка ошибок запросов
 	
 	$page = new \Slim\App($c); // инициализация страницы
 	
-	require 'core/init/twig.php'; // инициализация twig
-	require 'view/replace.php'; // шаблоны меток
+		require 'routers/twig/path.php'; // инициализация пути twig шаблон
+		twig_init($page, 'view/public/'); // путь до шаблона публичной части
 
-	require 'routers/redirect.router.php'; // редиректы	
+		require 'view/replace.backend.php'; // шаблоны меток панели управления
+		require 'view/replace.public.php'; // шаблоны меток
 
-	require 'routers/index.router.php'; // обработка главной страницы
-	require 'routers/page.router.php'; // обработка остальных страниц	
+		// обработка административной части
+		require 'routers/backend/admin.router.php'; // панель управления	
+
+		
+
+		// обработка публичной части
+		require 'routers/public/redirect.router.php'; // редиректы	
+		require 'routers/public/index.router.php'; // обработка главной страницы
+		require 'routers/public/page.router.php'; // обработка остальных страниц	
 	
 	$page->run(); // отрисовка

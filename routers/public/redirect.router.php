@@ -7,6 +7,8 @@
 		'/routers/' => '/',
 		'/view/' => '/',
 		'/models/' => '/',
+		'/index' => '/',
+		'/index/' => '/',
 	];
 
 	foreach ($redirect as $key => $value) {

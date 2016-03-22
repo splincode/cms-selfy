@@ -2,10 +2,12 @@
 	
 	$c = new \Slim\Container();
 	$c['notFoundHandler'] = function ($c) {
-	    return function ($request, $response) use ($c) {
+		$error404 = file_get_contents('view/404.html');
+
+	    return function ($request, $response) use ($c, $error404) {
 	        return $c['response']
 	        	->withStatus(404)
 	        	->withHeader('Content-Type', 'text/html')
-	        	->write('Page not found');
+	        	->write($error404);
 	    };
 	};
