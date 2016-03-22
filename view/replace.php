@@ -1,9 +1,9 @@
 <?php
 	
-	// замена меток в страницах
+	// замена меток в index.html по GET-url
 	$replace = [
 		'/' => [
 			'pagetitle' => 'Главная страница',
-			'content' => 'text'
+			'content' => 'Текст'
 		]
 	];
