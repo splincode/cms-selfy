@@ -12,11 +12,11 @@ SlimMVC use the PHP microframework [Slim Framework](http://www.slimframework.com
 
 Содержимое CMS
 ---------------
-* core/ <sup> </sup><sub>библиотека slimframework</sub>
-* routers/ <sup> </sup><sub>настройка url-переходов</sub>
-* view/ <sup> </sup><sub>фронтенд</sub>
-	* composer.json <sup> </sup><sub>зависимости в проекте</sub>
-	* index.php <sup> </sup><sub>ядро системы</sub>
+* core/ (библиотека slimframework)
+* routers/ (настройка url-переходов)
+* view/ (фронтенд)
+	* composer.json (зависимости в проекте)
+	* index.php (ядро системы)
 
 ### core/
 
@@ -38,7 +38,7 @@ SlimMVC use the PHP microframework [Slim Framework](http://www.slimframework.com
 	
 	require 'core/autoload.php'; // подгрузка библиотек
 	require 'routers/status/bad.php'; // обработка ошибок запросов
-	
+
 	$page = new \Slim\App($c); // инициализация страницы
 	
 	require 'routers/twig/path.php'; // инициализация пути twig шаблон
@@ -49,8 +49,6 @@ SlimMVC use the PHP microframework [Slim Framework](http://www.slimframework.com
 
 	// обработка административной части
 	require 'routers/backend/admin.router.php'; // панель управления	
-
-	
 
 	// обработка публичной части
 	require 'routers/public/redirect.router.php'; // редиректы	
