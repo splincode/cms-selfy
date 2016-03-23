@@ -12,11 +12,11 @@ SlimMVC use the PHP microframework [Slim Framework](http://www.slimframework.com
 
 Содержимое CMS
 ---------------
-* core/ (библиотека slimframework)  
-* routers/ (настройка url-переходов)
-* view/ (фронтенд)
-	* composer.json (зависимости в проекте)
-	* index.php (ядро системы)
+* core/ #библиотека slimframework 
+* routers/ #настройка url-переходов
+* view/ #фронтенд
+	* composer.json # зависимости в проекте
+	* index.php # ядро системы
 
 ### core/
 
