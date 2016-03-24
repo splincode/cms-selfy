@@ -1,22 +1,43 @@
-<?php
-	
-	require 'core/autoload.php'; // подгрузка библиотек
-	require 'routers/status/bad.php'; // обработка ошибок запросов
+<?php 
 
-	$page = new \Slim\App($c); // инициализация страницы
+	/*
+	*	@CORE_PATH - путь до slim фреймворка
+	*	@FRONTEND_PATH - путь до шаблона панели управления
+	*	@BACKEND_PATH - путь до шаблона сайта публичной части
+	*
+	*/
 	
-	require 'routers/twig/path.php'; // инициализация пути twig шаблон
-	twig_init($page, 'view/public/'); // путь до шаблона публичной части
+	session_start();
+	const CORE_PATH = 'mycore/';
+	const FRONTEND_PATH = 'frontend/view/';
+	const BACKEND_PATH = 'backend/view/';
 
-	require 'view/replace.backend.php'; // шаблоны меток панели управления
-	require 'view/replace.public.php'; // шаблоны меток
+
+	// загружка Slim
+	require CORE_PATH . 'autoload.php';
+
+
+	// обработка статуса и шаблонизатора 
+	require CORE_PATH . 'selfy/slim.404.php';
+	require CORE_PATH . 'selfy/twig_init.php';
+
+
+	// инициализация ядра
+	$page = new \Slim\App($c); 
+
+
+	// инициализация public шаблона
+	twig_path_init($page, FRONTEND_PATH);
+
 
 	// обработка административной части
-	require 'routers/backend/admin.router.php'; // панель управления	
+	require 'backend/routers/get.php';
+	require 'backend/routers/post.php';
+
 
 	// обработка публичной части
-	require 'routers/public/redirect.router.php'; // редиректы	
-	require 'routers/public/index.router.php'; // обработка главной страницы
-	require 'routers/public/page.router.php'; // обработка остальных страниц	
-	
-	$page->run(); // отрисовка
+	require 'frontend/routers/get.php';
+	require 'frontend/routers/post.php';
+
+
+	$page->run();

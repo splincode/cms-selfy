@@ -5,7 +5,7 @@
         "slim/pdo": "~1.9"
     },
     "config": {
-    	"vendor-dir": "core"
+    	"vendor-dir": "mycore"
     }
     
 }
