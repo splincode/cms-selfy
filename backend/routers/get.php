@@ -2,31 +2,32 @@
 
 	require 'backend/twig_replace.php';
 
-	$page->get('/admin', function ($request, $response, $args) use($page, $adminreplace) {
 
+	// страница установки CMS
+	$page->get('/install', function ($request, $response, $args) use($page, $adminreplace) {
+		if (file_exists("myconfig/db.php")) return $response->withRedirect('/'); ;
+		
 		twig_path_init($page, BACKEND_PATH);
+		return $this->view->render($response, 'install.html', $adminreplace['/admin']);
+	});
 
-		if (isset($_SESSION['auth'])) {
-			if ($_SESSION['auth'] === true) {
-				echo "активна";
-			}
 
+	// панель управления
+	$page->get('/admin', function ($request, $response, $args) use($page, $adminreplace) {
+		if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
+			twig_path_init($page, BACKEND_PATH);
 			return $this->view->render($response, 'index.html', $adminreplace['/admin']); 
 		}
 
 		return $response->withRedirect('/login'); 
-		
 	});
 
+
+	// вход в админку
 	$page->get('/login', function ($request, $response, $args) use($page, $adminreplace) {
+		if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) return $response->withRedirect('/admin');
 
 		twig_path_init($page, BACKEND_PATH);
-
-		if (isset($_SESSION['auth'])) {
-			if ($_SESSION['auth'] === true) {
-				return $response->withRedirect('/admin'); ;
-			}
-		}
-
-		return $this->view->render($response, 'login.html', $adminreplace['/admin']);
+		return $this->view->render($response, 'login.html', $adminreplace['/admin']);	
 	});
+
