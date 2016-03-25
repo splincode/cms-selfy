@@ -4,27 +4,31 @@
     <base href="backend/view/">
 
     <meta charset="UTF-8">
-    <title>Вход в систему</title>
-    <link href='img/logo.png' rel='shortcut icon' type='image/png'>
+    <title>{{pagetitle}}</title>
     <link rel="stylesheet" href="css/login.css" media="screen" type="text/css" />
 </head>
 <body>
     <div id="login">
        <form action="/admin" method="post">
             <fieldset class="clearfix">
+                <p class="top">{{pagetitle}}</p>
                 <p>
                 	<span class="fontawesome-user"></span>
-                	<input type="text" name="authAdmin" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required>
+                	<input type="text" name="authAdmin" value="{{login}}" 
+                        onBlur="if(this.value == '') this.value = '{{login}}'" 
+                        onFocus="if(this.value == '{{login}}') this.value = ''" required>
                 </p>
 
                 <p>
                 	<span class="fontawesome-lock"></span>
-                	<input type="password" name="authPass" value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required>
+                	<input type="password" name="authPass" value="{{password}}"
+                     onBlur="if(this.value == '') this.value = '{{password}}'" 
+                     onFocus="if(this.value == '{{password}}') this.value = ''" required>
                 </p>
 
-                <p><input type="submit" value="ВОЙТИ"></p>
+                <p><input type="submit" value="{{enter}}"></p>
 
-                <p><input type="checkbox" name="savePass"  value="save">Запомнить пароль для входа в CMS?</p>
+                <p><input type="checkbox" name="savePass"  value="save">{{save}}</p>
             </fieldset>
         </form>
        

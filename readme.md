@@ -10,6 +10,8 @@ SlimMVC use the PHP microframework [Slim Framework](http://www.slimframework.com
 1. Загружаем проект к себе в директорию
 2. Запускаем установку [http://domain.com/install](#)
 <img src="https://habrastorage.org/files/681/09f/af3/68109faf322643f4b93a015bd17879cc.png"/>
+3. Переходим на страницу входа в систему [http://domain.com/login](#)
+<img src="https://habrastorage.org/files/9b4/cb6/f58/9b4cb6f582d3465f84655856aa74ed79.png"/>
 
 Содержимое CMS
 ---------------

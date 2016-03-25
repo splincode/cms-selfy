@@ -28,6 +28,6 @@
 		if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) return $response->withRedirect('/admin');
 
 		twig_path_init($page, BACKEND_PATH);
-		return $this->view->render($response, 'login.html', $adminreplace['/admin']);	
+		return $this->view->render($response, 'login.html', $adminreplace['/login']);	
 	});
 
