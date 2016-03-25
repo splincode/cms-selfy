@@ -8,7 +8,7 @@
 		if (file_exists("myconfig/db.php")) return $response->withRedirect('/'); ;
 		
 		twig_path_init($page, BACKEND_PATH);
-		return $this->view->render($response, 'install.html', $adminreplace['/admin']);
+		return $this->view->render($response, 'install.html', $adminreplace['/install']);
 	});
 
 

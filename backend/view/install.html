@@ -4,7 +4,7 @@
     <base href="backend/view/">
 
     <meta charset="UTF-8">
-    <title>{pagetitle}</title>
+    <title>{{pagetitle}}</title>
     <link href='img/logo.png' rel='shortcut icon' type='image/png'>
     <link rel="stylesheet" href="css/login.css" media="screen" type="text/css" />
 </head>
@@ -12,51 +12,51 @@
     <div id="login">
        <form action="/install" method="post">
             <fieldset class="clearfix">
-                <p class="top">Установка системы </p>
-                <p class="middle">Настройка доступа к базе данных </p>
+                <p class="top">{{pagetitle}}</p>
+                <p class="middle">{{oneinfo}}</p>
                 <p>
                 	<span class="fa-database"></span>
-                	<input type="text" name="authAdmin" value="Имя базы данных" 
-                        onBlur="if(this.value == '') this.value = 'Имя базы данных'"
-                        onFocus="if(this.value == 'Имя базы данных') this.value = ''" required>
+                	<input type="text" name="database" value="{{titlenamedb}}" 
+                        onBlur="if(this.value == '') this.value = '{{titlenamedb}}'"
+                        onFocus="if(this.value == '{{titlenamedb}}') this.value = ''" required>
                 </p>
 
                 <p>
                     <span class="fa-user"></span>
-                    <input type="text" name="authAdmin" value="Имя пользователя базы данных" 
-                        onBlur="if(this.value == '') this.value = 'Имя пользователя базы данных'"
-                        onFocus="if(this.value == 'Имя пользователя базы данных') this.value = ''" required>
+                    <input type="text" name="userdb" value="{{titlenameuserdb}}" 
+                        onBlur="if(this.value == '') this.value = '{{titlenameuserdb}}'"
+                        onFocus="if(this.value == '{{titlenameuserdb}}') this.value = ''" required>
                 </p>
 
                 <p>
                     <span class="fa-key"></span>
-                    <input type="text" name="authAdmin" value="Пароль" 
-                        onBlur="if(this.value == '') this.value = 'Пароль'"
-                        onFocus="if(this.value == 'Пароль') this.value = ''" required>
+                    <input type="text" name="passwordb" value="{{passworddb}}" 
+                        onBlur="if(this.value == '') this.value = '{{passworddb}}'"
+                        onFocus="if(this.value == '{{passworddb}}') this.value = ''" required>
                 </p>
 
                 <p>
                     <span class="fa-shield"></span>
-                    <input type="text" name="authAdmin" value="Хост, например: localhost" 
-                        onBlur="if(this.value == '') this.value = 'Хост, например: localhost'"
-                        onFocus="if(this.value == 'Хост, например: localhost') this.value = ''" required>
+                    <input type="text" name="host" value="{{host}}" 
+                        onBlur="if(this.value == '') this.value = '{{host}}'"
+                        onFocus="if(this.value == '{{host}}') this.value = ''" required>
                 </p>
-                <p class="middle">Настройка входа в панель управления </p>
+                <p class="middle">{{twoinfo}}</p>
                 <p>
                     <span class="fa-sign-in"></span>
-                    <input type="text" name="authAdmin" value="Логин для входа, например: admin" 
-                        onBlur="if(this.value == '') this.value = 'Логин для входа, например: admin'"
-                        onFocus="if(this.value == 'Логин для входа, например: admin') this.value = ''" required>
+                    <input type="text" name="login" value="{{login}}" 
+                        onBlur="if(this.value == '') this.value = '{{login}}'"
+                        onFocus="if(this.value == '{{login}}') this.value = ''" required>
                 </p>
 
                 <p>
                     <span class="fa-key"></span>
-                    <input type="text" name="authAdmin" value="Пароль" 
-                        onBlur="if(this.value == '') this.value = 'Пароль'"
-                        onFocus="if(this.value == 'Пароль') this.value = ''" required>
+                    <input type="text" name="pass" value="{{password}}" 
+                        onBlur="if(this.value == '') this.value = '{{password}}'"
+                        onFocus="if(this.value == '{{password}}') this.value = ''" required>
                 </p>
 
-                <p><input type="submit" value="УСТАНОВИТЬ"></p>
+                <p><input type="submit" value="{{install}}"></p>
 
             </fieldset>
         </form>

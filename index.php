@@ -6,7 +6,6 @@
 	* @BACKEND_PATH - путь до шаблона сайта публичной части
 	*
 	*/
-	
 	session_start();
 	const CORE_PATH = 'mycore/';
 	const FRONTEND_PATH = 'frontend/view/';
