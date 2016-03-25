@@ -1,4 +1,4 @@
-SelfyCMS
+SelfyCMS<sub>beta</sub> 0.45
 =======
 
 <!--SlimMVC is the easiest and flexible way to create your PHP application using a MVC pattern.
