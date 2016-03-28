@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+	<base href="backend/view/">
+
 	<meta charset="UTF-8">
 	<title>{{pagetitle}}</title>
-	<style>
-		body {
-			background-color: green;
-		}
-	</style>
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	{{content}}
+	
+	<section class="wellcome">
+	    <p class="wellcome_tx1">{{wellcome_tx1}}</p>
+	    <p class="wellcome_tx2">{{wellcome_tx2}}</p>
+	</section>
+	
+	<section class='panel'>
+		<ul class='panel__menu_list'>
+			<li><i class="fa fa-pencil-square-o"></i>Настройки системы</li>
+			<li><i class="fa fa-file-text-o"></i>Редактирование страниц</li>
+			<li><i class="fa fa-modx"></i>Модули</li>
+			<li><i class="fa fa-delicious"></i>Помощь</li>
+		</ul>
+	</section>
+
+	<section class="main">
+		
+	</section>
+	
+	
 </body>
 </html>

@@ -1,0 +1,153 @@
+@import 'reset.css';
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+@font-face {
+  font-family: 'Cuprum'
+  font-style: normal
+  font-weight: 400
+  src: local('Cuprum'), local('Cuprum-Regular'), url("ttf/cuf.woff") format('woff');
+}
+
+// function { ************************
+
+// размер
+size(w, h) {
+	width: w
+	height: h
+}
+
+// размер
+min-size(w, h) {
+	min-width: w
+	min-height: h
+}
+
+// } *********************************
+
+body {
+  // foo
+  min-size(460px, 600px)
+  // styles
+  background-color: #282828
+  overflow: hidden
+}
+
+/*
+
+  body
+  ********************************************
+  *                                          *
+  *          ********************            *
+  *          *                  *            *
+  *          *    .wellcome     *            *
+  *          *                  *            *
+  *          ********************            *
+  *                                          *
+  *                                          *
+  ********************************************
+
+*/
+
+.wellcome {
+	// foo
+	size(260px, 100px)
+	// styles
+	position: absolute
+	left: 50%
+	top:50%
+	font-family: 'Cuprum'
+	margin-top: -55px
+	margin-left: -180px
+	text-align: right
+	padding-right: 100px
+	padding-top: 10px
+	font-size: 40px
+	color:#fff
+	background: url("../img/logos.png") right top no-repeat
+	
+	// inner-block
+	&_tx1 {
+		font-size: 30px
+	}
+	
+	&_tx2 {
+	 	font-size: 60px
+	}		
+}
+
+
+/*
+
+  body
+  ********************************************
+  *                 .panel                   * 
+  *  * * * * * * * * * * * * * * * * * * * * *
+  *                                          *
+  *                                          *
+  *                                          *
+  *                                          *
+  *                                          *
+  *                                          *
+  *                                          *
+  *                                          *
+  *                                          *
+  *                                          *
+  ********************************************
+
+*/
+
+.panel {
+	// foo1
+	min-size(600px, auto)
+	// foo2
+	size(100%, 27px)
+
+	//styles
+	font-family: 'Cuprum'
+	background-color: #535353
+	position: fixed
+	z-index: 2
+	left: 0
+	top: 0
+	border-bottom: 1px solid #383838
+	outline: 1px solid #6A6A6A
+
+	
+	&__menu_list li {
+		// foo
+		size(auto, 16px)
+		// styles
+		float: left
+		color: #fff
+		font-size: 14px
+		margin: 3px 10px 0 10px
+		letter-spacing: 1px
+		padding: 3px 8px 2px 8px
+		cursor: pointer
+		border: 1px solid #535353
+		outline: 1px solid #535353
+		position: relative
+		
+		& i {
+		    padding-right: 5px;
+		}
+		
+		&:hover {
+			border: 1px solid #383838
+			outline: 1px solid #6A6A6A
+			background-color: #6A6A6A
+		}
+
+	}
+	
+}
+
+
+.main {
+   width: 100%
+   height: 100%
+   position: absolute
+   margin-top: 3px
+}
+
+	

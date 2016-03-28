@@ -1,0 +1,8 @@
+@import'reset.css';@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");@font-face{font-family:'Cuprum';font-style:normal;font-weight:400;src:local('Cuprum'), local('Cuprum-Regular'), url("ttf/cuf.woff") format('woff');}body{min-width:460px;min-height:600px;background-color:#282828;overflow:hidden;}.wellcome{width:260px;height:100px;position:absolute;left:50%;top:50%;font-family:'Cuprum';margin-top:-55px;margin-left:-180px;text-align:right;padding-right:100px;padding-top:10px;font-size:40px;color:#fff;background:url("../img/logos.png") right top no-repeat;}.wellcome_tx1{font-size:30px;}.wellcome_tx2{font-size:60px;}.panel{min-width:600px;min-height:auto;width:100%;height:27px;font-family:'Cuprum';background-color:#535353;position:fixed;z-index:2;left:0;top:0;border-bottom:1px solid #383838;outline:1px solid #6a6a6a;}.panel__menu_list li{width:auto;height:16px;float:left;color:#fff;font-size:14px;margin:3px 10px 0 10px;letter-spacing:1px;padding:3px 8px 2px 8px;cursor:pointer;border:1px solid #535353;outline:1px solid #535353;position:relative;}.panel__menu_list li i{padding-right:5px;}.panel__menu_list li:hover{border:1px solid #383838;outline:1px solid #6a6a6a;background-color:#6a6a6a;}
+
+ .main {
+    width:100%;
+    height: 100%;
+    position: absolute;
+    margin-top: 3px;
+ }

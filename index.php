@@ -4,8 +4,9 @@
 	* @CORE_PATH - путь до slim фреймворка
 	* @FRONTEND_PATH - путь до шаблона панели управления
 	* @BACKEND_PATH - путь до шаблона сайта публичной части
-	*
+	* @$pdo - готовое соединение с базой данных
 	*/
+	
 	session_start();
 	const CORE_PATH = 'mycore/';
 	const FRONTEND_PATH = 'frontend/view/';
@@ -27,6 +28,10 @@
 
 	// инициализация public шаблона
 	twig_path_init($page, FRONTEND_PATH);
+
+
+	// подключение класса PDO Slim и создание объекта $pdo
+	require CORE_PATH . 'selfy/pdo.php';
 
 
 	// обработка административной части
